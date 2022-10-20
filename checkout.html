@@ -1,0 +1,161 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <title>Representation of Warriorhood</title>
+  <style>  
+    section{
+      padding: 60px 0;
+    }
+  </style>
+</head>
+<body  class="bg-light">
+
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-md navbar-light pt-5 pb-4">
+    <div class="container-xxl">
+      <!-- navbar title -->
+      <a class="navbar-brand" href="index.html">
+        <span class="text-muted fw-bold">
+          <i class="bi bi-book"></i>
+          Representation of Warriorhood
+        </span>
+      </a>
+      <!-- toggle button for mobile nav -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- navbar links -->
+      <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#chapters" target="_blank">About The Book</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#author" target="_blank">About The Author</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contact" target="_blank">Contact</a>
+          </li>
+          <li class="nav-item ms-2 d-none d-md-inline">
+            <a class="btn btn-dark" href="checkout.html">Buy now</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- payment info form -->
+  <section id="contact">
+    <div class="container-lg">
+      
+      <div class="text-center">
+        <h2>Enter payment details</h2>
+      </div>
+      <div class="row justify-content-center my-5">
+        <div class="col-lg-6">
+          
+          <form>
+            <h4>Billing address</h4>
+            <div class="row">
+                <div class="col-sm-6">
+                    <label for="first-name" class="form-label">First Name:</label>
+                    <div class="mb-4 input-group">
+                    <span class="input-group-text">
+                        <i class="bi bi-person-fill text-secondary"></i>
+                    </span>
+                    <input type="text" id="first-name" class="form-control" placeholder="e.g. Floki" required/>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <label for="last-name" class="form-label">Last Name:</label>
+                    <div class="mb-4 input-group">
+                    <span class="input-group-text">
+                        <i class="bi bi-person-fill text-secondary"></i>
+                    </span>
+                    <input type="text" id="last-name" class="form-control" placeholder="e.g. Flokievski" required/>
+                    </div>
+                </div>
+            </div>
+
+            <label for="email" class="form-label">Email address:</label>
+            <div class="input-group mb-4">
+              <span class="input-group-text">
+                <i class="bi bi-envelope-fill text-secondary"></i>
+              </span>
+              <input type="email" id="email" class="form-control" placeholder="e.g. floki@email.com" required/>
+            </div>
+            <label for="subject" class="form-label">Payment method</label>
+            <div class="mb-4 input-group">
+              <span class="input-group-text">
+                <i class="bi bi-credit-card-2-front-fill text-secondary"></i>
+              </span>
+              <select class="form-select" id="card type">
+                <option value="credit card" selected>Credit Card</option>
+                <option value="debit card">Debit Card</option>
+              </select>
+
+<!-- I would like for the input fields below to change depending whether credit or debit card is selected above.
+But I still do not know how, and if at all it can be done with html and css. -->
+
+              <div class="row gy-3">
+                <div class="col-md-6">
+                  <label for="cc-name" class="form-label mt-2">Name on card</label>
+                  <input type="text" class="form-control" id="cc-name" required>
+                  <small class="text-muted">Full name as displayed on card</small>
+                  <div class="invalid-feedback">
+                    Name on card is required
+                  </div>
+                </div>
+    
+                <div class="col-md-6">
+                  <label for="cc-number" class="form-label mt-2">Credit card number</label>
+                  <input type="text" class="form-control" id="cc-number" required>
+                  <div class="invalid-feedback">
+                    Credit card number is required
+                  </div>
+                </div>
+    
+                <div class="col-md-3">
+                  <label for="cc-expiration" class="form-label">Expiration</label>
+                  <input type="text" class="form-control" id="cc-expiration" required>
+                  <div class="invalid-feedback">
+                    Expiration date required
+                  </div>
+                </div>
+    
+                <div class="col-md-3">
+                  <label for="cc-cvv" class="form-label">CVV</label>
+                  <input type="text" class="form-control" id="cc-cvv" required>
+                  <div class="invalid-feedback">
+                    Security code required
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="mb-4 mt-3 text-center">
+                <button type="submit" class="btn btn-dark"></button>
+              </div> -->
+            </div>
+              <a class="btn btn-dark" href="confirmation.html">Checkout</a>
+            </div>
+
+
+            <!-- The submit button above is supposed to be the one used moving forward, but for the sake of seeing the prototype's three pages, I use the href just to push things forward.
+            The fields are made required, but I still do not know how to make a submit button that leads me to another html page. I guess it's a lesson moving forward. -->
+
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+</body>
+</html>
